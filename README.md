@@ -47,8 +47,8 @@ StrictJS.get({
    path: `/`,
    validation: {},
    failOver:”fail action method”,
-   Tags: ["tag for swagger",”description of api in swagger"],
-   handler : function(req, res) {
+   Tags: ["tag for swagger","description of api in swagger"],
+  async handler(req, res) {
      res.json(“Hello World !!”);
    },
  });
