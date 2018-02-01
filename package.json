@@ -1,0 +1,27 @@
+{
+  "name": "strictjs",
+  "version": "0.1.1",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Rahul Kamboj",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/strictjs/strictjs"
+  },
+  "dependencies": {
+    "boom": "^7.1.1",
+    "consul": "^0.30.0",
+    "formidable": "^1.1.1",
+    "joi": "^13.0.2",
+    "jsonwebtoken": "^8.1.0",
+    "path": "^0.12.7",
+    "qs": "^6.1.0",
+    "save": "^2.3.2",
+    "url": "^0.11.0"
+  }
+}
