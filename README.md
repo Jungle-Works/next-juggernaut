@@ -37,7 +37,7 @@ const configSever = {
    "protocol": "http",
    "port": 3000,
    "name": "dev_server",
-   "host": "0.0.0.0,
+   "host": "0.0.0.0",
     com: true,
 };
 const StrictJS = require('strictjs')(configSever);
