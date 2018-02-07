@@ -5,12 +5,15 @@ var cfg = {
     host: "0.0.0.0",
     com: true,
     tls : {
-
+        
     }
 }
 
 var strictjs = require("../server")(cfg)
 var com = strictjs.com(cfg)
+var io = require('socket.io');
+
+
 
 com.registerFunction("getUser", function (payload, reply) {
     reply.sendReply(payload)
@@ -61,7 +64,7 @@ strictjs.get({
 strictjs.post({
     path: "/names",
     handler: function (req, res) {
-        console.log(req.form.fame)
+        console.log(req.form)
         res.json({"success": "ok + /names"})
     },
     failOver: function (req, res, error) {
@@ -131,4 +134,12 @@ strictjs.get({
 // })
 
 
-strictjs.start()
+// strictjs.start()
+var server =  strictjs.server.listen(3001)
+
+io.listen(server).on('connection', function(socket){
+  console.log('a user connected');
+  socket.on("yguuh",function (data) {
+     console.log(data)
+  })
+});
