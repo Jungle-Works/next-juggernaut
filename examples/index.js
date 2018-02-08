@@ -79,9 +79,10 @@ strictjs.post({
             name: joi.any(),
             fame: joi.string().required()
         },
-        // headers: {
-        //     "content-type": joi.string()
-        // }
+        headers: {
+            "content-type": joi.string().required(),
+            "akash" : joi.string().required()
+        }
 
     }
     //auth: "JwtAuth"
